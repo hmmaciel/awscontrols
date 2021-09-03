@@ -13,15 +13,14 @@ resource "aws_security_group" "subnet-backend-sg" {
     protocol  = "tcp"
   }
 
-  # Allow Tomcat port communication
+  # Allow communication from ALB
   ingress {
-    cidr_blocks = [
-      "0.0.0.0/0"
+    security_groups = [
+      aws_security_group.alb-sg.id
     ]
-    from_port   = 5006
-    to_port     = 5006
-    protocol    = "tcp"
-    description = "HTTP"
+    from_port = 0
+    to_port   = 0
+    protocol  = "-1"
   }
 
   # Allow all outbound traffic
