@@ -4,7 +4,7 @@ resource "aws_instance" "virtual_machine" {
 
   // AMI Code Frankfurt
   //ami = "ami-07df274a488ca9195"
-  
+
   // Comment following line if using Elastic IP (found in network.tf file)
   associate_public_ip_address = true
   instance_type               = "t2.micro"
