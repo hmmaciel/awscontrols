@@ -1,6 +1,6 @@
 resource "aws_route53_record" "www" {
   zone_id = "Z0642644RYY4VJSV5F2F"
-  name    = "awscontrols.cfappsecurity.com"
+  name    = "iam.cfappsecurity.com"
   type    = "A"
 
   alias {
