@@ -8,5 +8,5 @@ resource "aws_lb_target_group" "target-group" {
 resource "aws_lb_target_group_attachment" "target-group-att" {
   target_group_arn = aws_lb_target_group.target-group.arn
   target_id        = aws_instance.virtual_machine.id
-  port             = 5006
+  port             = var.ec2_app_port
 }

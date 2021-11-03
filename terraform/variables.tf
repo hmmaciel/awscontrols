@@ -19,3 +19,9 @@ variable "subnet_backend_range" {
 variable "bucket_name" {
   default = "framework-poc-s3-bucket"
 }
+
+variable "ec2_app_port" {
+  description = "Port where the EC2 instance serves the App"
+  type        = number
+  default     = 80
+}
