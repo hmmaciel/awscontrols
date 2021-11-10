@@ -19,6 +19,6 @@ output "userpool_client_id" {
 }
 
 output "route53_url" {
-  description = "Route 53 URK"
+  description = "Route 53 URL"
   value       = aws_route53_record.www.name
 }
